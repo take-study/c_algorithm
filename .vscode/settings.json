@@ -4,6 +4,21 @@
       "cwd": "{workspaceFolder}/bin",
       "binaryPath": "{workspaceFolder}/bin/main",
       "binaryArgs": []
+    },
+    {
+      "cwd": "/home/arch/WorkSpace/Personal/Algorithm/C/bin",
+      "binaryPath": "/home/arch/WorkSpace/Personal/Algorithm/C/bin/main",
+      "binaryArgs": []
+    },
+    {
+      "cwd": "/home/arch/WorkSpace/Personal/Algorithm/C/bin",
+      "binaryPath": "/home/arch/WorkSpace/Personal/Algorithm/C/bin/test",
+      "binaryArgs": []
     }
-  ]
+  ],
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/include",
+    "${workspaceFolder}/lib/**"
+  ],
+  "C_Cpp.default.cStandard": "c99"
 }

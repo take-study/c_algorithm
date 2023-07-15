@@ -8,11 +8,18 @@ ${BINDIR}:
 
 ${OBJDIR}/%.o: ${SRCDIR}/%.c | ${OBJDIR}
 	${CC} ${CFLAGS} -c $< -o $@
+${OBJDIR}/%.o: ${LIBDIR}/%.c | ${OBJDIR}
+	${CC} ${CFLAGS} -c $< -o $@
+${OBJDIR}/%.o: ${TESTDIR}/%.c | ${OBJDIR}
+	${CC} ${CFLAGS} -c $< -o $@
 
-.PHONY: main clean
+.PHONY: main clean test
 
-main: ${OBJDIR}/main.o | ${BINDIR}
-	${CC} ${LDFLAGS} -o ${BINDIR}/$@ $<
-	
+main: ${LIBOBJS} ${OBJS} | ${BINDIR}
+	${CC} ${LIBOBJS} ${OBJS} -o ${BINDIR}/$@
+
+test: ${TESTOBJS} ${LIBOBJS} | ${BINDIR}
+	${CC} ${TESTOBJS} ${LIBOBJS} -o ${BINDIR}/$@
+
 clean: | ${OBJDIR} ${BINDIR}
 	rm -rf ${OBJDIR} ${BINDIR}

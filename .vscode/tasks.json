@@ -3,9 +3,16 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "build main",
+      "label": "build-main",
       "command": "make",
       "args": ["main"],
+      "options": { "cwd": "${workspaceFolder}" }
+    },
+    {
+      "type": "cppbuild",
+      "label": "build-test",
+      "command": "make",
+      "args": ["test"],
       "options": { "cwd": "${workspaceFolder}" }
     }
   ]
