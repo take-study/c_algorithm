@@ -20,5 +20,6 @@
     "${workspaceFolder}/include",
     "${workspaceFolder}/lib/**"
   ],
-  "C_Cpp.default.cStandard": "c99"
+  "C_Cpp.default.cStandard": "c99",
+  "C_Cpp.errorSquiggles": "disabled"
 }
